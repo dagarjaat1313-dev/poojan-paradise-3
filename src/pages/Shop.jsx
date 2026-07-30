@@ -1,5 +1,5 @@
 import products from "../data/Products";
-import ProductCard from "../components/ProductCard/ProductCard";
+import ProductCard from "../components/ProductCard";
 import "./Shop.css";
 
 export default function Shop() {
