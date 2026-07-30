@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
   const { cart } = useCart();
