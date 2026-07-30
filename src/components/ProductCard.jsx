@@ -1,7 +1,7 @@
 import "./ProductCard.css";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../../context/CartContext";
-import { useWishlist } from "../../context/WishlistContext";
+import { ... } from "../context/WishlistContext";
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
