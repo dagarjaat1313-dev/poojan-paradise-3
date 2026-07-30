@@ -1,17 +1,12 @@
-import products from "../../data/products";
-import ProductCard from "../ProductCard/ProductCard";
-import "./FeaturedProducts.css";
+import "./ProductCard.css";
 
-export default function FeaturedProducts() {
+export default function ProductCard({ product }) {
   return (
-    <section className="featured">
-      <h2>Best Sellers</h2>
-
-      <div className="products-grid">
-        {products.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </section>
+    <div className="product-card">
+      <img src={product.image} alt={product.name} />
+      <h3>{product.name}</h3>
+      <p>₹{product.price}</p>
+      <button>Add to Cart</button>
+    </div>
   );
 }
