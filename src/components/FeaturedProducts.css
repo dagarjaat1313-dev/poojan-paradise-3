@@ -1,0 +1,16 @@
+.featured{
+  padding:80px 8%;
+  background:#FDF7EE;
+}
+
+.featured h2{
+  text-align:center;
+  color:#7A1F1F;
+  margin-bottom:40px;
+}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
