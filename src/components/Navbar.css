@@ -1,0 +1,61 @@
+.topbar{
+background:#7A1F1F;
+color:#fff;
+padding:10px;
+text-align:center;
+font-size:14px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#fff;
+}
+
+.logo h2{
+color:#C9A227;
+}
+
+.search{
+display:flex;
+width:40%;
+}
+
+.search input{
+flex:1;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px 0 0 8px;
+}
+
+.search button{
+padding:12px 18px;
+background:#C9A227;
+border:none;
+color:#fff;
+border-radius:0 8px 8px 0;
+cursor:pointer;
+}
+
+.icons{
+display:flex;
+gap:20px;
+font-size:22px;
+color:#7A1F1F;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:15px;
+background:#FDF7EE;
+font-weight:bold;
+}
+
+.menu a{
+color:#333;
+text-decoration:none;
+}
