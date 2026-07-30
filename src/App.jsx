@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
-import Hero from "./components/Hero/Hero";
-import Categories from "./components/Categories/Categories";
-import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
+import Hero from "./components/Hero";
+import Categories from "./components/Categories";
+import FeaturedProducts from "./components/FeaturedProducts";
 
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
