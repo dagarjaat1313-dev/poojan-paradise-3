@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 import Categories from "./components/Categories";
 import FeaturedProducts from "./components/FeaturedProducts";
 
