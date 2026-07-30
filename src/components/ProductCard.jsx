@@ -1,17 +1,25 @@
 import "./ProductCard.css";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../../context/CartContext";
+import { useWishlist } from "../../context/WishlistContext";
 
 export default function ProductCard({ product }) {
-
   const { addToCart } = useCart();
+  const { wishlist, toggleWishlist } = useWishlist();
+
+  const isWishlisted = wishlist.some(
+    (item) => item.id === product.id
+  );
 
   return (
     <div className="product-card">
 
       <span className="badge">Best Seller</span>
 
-      <button className="wishlist">
+      <button
+        className={`wishlist ${isWishlisted ? "active" : ""}`}
+        onClick={() => toggleWishlist(product)}
+      >
         <FaHeart />
       </button>
 
