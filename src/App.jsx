@@ -1,39 +1,37 @@
-import { Routes, Route } from "react-router-dom";
-
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
-
-import Hero from "./components/hero";
-import Categories from "./components/Categories";
-import FeaturedProducts from "./components/FeaturedProducts";
-
-import Shop from "./pages/Shop";
-import Cart from "./pages/Cart";
-
-function Home() {
-  return (
-    <>
-      <Hero />
-      <Categories />
-      <FeaturedProducts />
-    </>
-  );
-}
 
 export default function App() {
   return (
-    <>
-      <Navbar />
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "#f8f4ed",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <div
+        style={{
+          textAlign: "center",
+          background: "#fff",
+          padding: "40px",
+          borderRadius: "12px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+        }}
+      >
+        <h1 style={{ color: "#7A1F1F", marginBottom: "10px" }}>
+          Poojan Paradise
+        </h1>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+        <h2 style={{ color: "green", marginBottom: "20px" }}>
+          ✅ Website is Working
+        </h2>
 
-      <Footer />
-      <WhatsAppButton />
-    </>
+        <p>
+          React successfully loaded.
+        </p>
+      </div>
+    </div>
   );
 }
