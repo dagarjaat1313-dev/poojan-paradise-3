@@ -1,5 +1,5 @@
-import products from "../data/products";
-import ProductCard from "../components/ProductCard/ProductCard";
+import products from "../data/Products";
+import ProductCard from "../components/ProductCard";
 import { useSearch } from "../context/SearchContext";
 import "./Shop.css";
 
@@ -15,11 +15,16 @@ export default function Shop() {
       <h1>All Products</h1>
 
       {filteredProducts.length === 0 ? (
-        <p style={{ textAlign: "center" }}>No products found.</p>
+        <p style={{ textAlign: "center", marginTop: "40px" }}>
+          No products found.
+        </p>
       ) : (
         <div className="shop-grid">
           {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+            />
           ))}
         </div>
       )}
