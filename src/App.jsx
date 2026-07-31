@@ -1,11 +1,11 @@
-
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <h1>Navbar Working</h1>
+      <Hero />
     </>
   );
 }
