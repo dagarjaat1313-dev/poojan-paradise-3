@@ -1,12 +1,22 @@
 import "./Navbar.css";
-import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
+import {
+  FaSearch,
+  FaHeart,
+  FaShoppingCart,
+  FaUser,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
+import { useSearch } from "../../context/SearchContext";
 
 export default function Navbar() {
   const { cart } = useCart();
+  const { search, setSearch } = useSearch();
 
-  const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+  const totalItems = cart.reduce(
+    (sum, item) => sum + item.qty,
+    0
+  );
 
   return (
     <>
@@ -20,7 +30,13 @@ export default function Navbar() {
         </Link>
 
         <div className="search">
-          <input type="text" placeholder="Search products..." />
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+
           <button>
             <FaSearch />
           </button>
@@ -31,8 +47,11 @@ export default function Navbar() {
 
           <Link to="/cart" className="cart-icon">
             <FaShoppingCart />
+
             {totalItems > 0 && (
-              <span className="cart-count">{totalItems}</span>
+              <span className="cart-count">
+                {totalItems}
+              </span>
             )}
           </Link>
 
