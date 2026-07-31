@@ -1,17 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { CartProvider } from "./context/CartContext";
+
 import App from "./App";
 import "./App.css";
 
+import { CartProvider } from "./context/CartContext";
 import { WishlistProvider } from "./context/WishlistContext";
+import { SearchProvider } from "./context/SearchContext";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <CartProvider>
-        <App />
-      </CartProvider>
+      <SearchProvider>
+        <WishlistProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </WishlistProvider>
+      </SearchProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
