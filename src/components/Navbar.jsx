@@ -6,8 +6,8 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useCart } from "../../context/CartContext";
-import { useSearch } from "../../context/SearchContext";
+import { useCart } from "../context/CartContext";
+import { useSearch } from "../context/SearchContext";
 
 export default function Navbar() {
   const { cart } = useCart();
@@ -36,7 +36,6 @@ export default function Navbar() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-
           <button>
             <FaSearch />
           </button>
@@ -47,11 +46,8 @@ export default function Navbar() {
 
           <Link to="/cart" className="cart-icon">
             <FaShoppingCart />
-
             {totalItems > 0 && (
-              <span className="cart-count">
-                {totalItems}
-              </span>
+              <span className="cart-count">{totalItems}</span>
             )}
           </Link>
 
@@ -63,8 +59,6 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/shop">Shop</Link>
         <Link to="/cart">Cart</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
       </div>
     </>
   );
